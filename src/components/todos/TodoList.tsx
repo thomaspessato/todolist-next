@@ -133,40 +133,40 @@ export function TodoList() {
     <div className="animate-fade-in">
       {/* Statistics Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-indigo-100 shadow-md">
+        <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700 border-indigo-100 dark:border-indigo-900/30 shadow-md">
           <CardContent className="pt-6 flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-indigo-600">Total Tasks</p>
-              <h3 className="text-2xl font-bold mt-1">{todos.length}</h3>
+              <p className="text-sm font-medium text-indigo-600 dark:text-indigo-300">Total Tasks</p>
+              <h3 className="text-2xl font-bold mt-1 dark:text-white">{todos.length}</h3>
             </div>
-            <div className="bg-indigo-100 p-3 rounded-full">
-              <Folder className="h-6 w-6 text-indigo-500" />
+            <div className="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full">
+              <Folder className="h-6 w-6 text-indigo-500 dark:text-indigo-300" />
             </div>
           </CardContent>
         </Card>
         
-        <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-emerald-100 shadow-md">
+        <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-slate-800 dark:to-slate-700 border-emerald-100 dark:border-emerald-900/30 shadow-md">
           <CardContent className="pt-6 flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-emerald-600">Completed</p>
-              <h3 className="text-2xl font-bold mt-1">{completedTodos.length}</h3>
+              <p className="text-sm font-medium text-emerald-600 dark:text-emerald-300">Completed</p>
+              <h3 className="text-2xl font-bold mt-1 dark:text-white">{completedTodos.length}</h3>
             </div>
-            <div className="bg-emerald-100 p-3 rounded-full">
-              <div className="h-6 w-6 flex items-center justify-center text-emerald-500">
+            <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-full">
+              <div className="h-6 w-6 flex items-center justify-center text-emerald-500 dark:text-emerald-300">
                 {completionPercentage}%
               </div>
             </div>
           </CardContent>
         </Card>
         
-        <Card className="bg-gradient-to-br from-amber-50 to-orange-50 border-orange-100 shadow-md">
+        <Card className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-700 border-orange-100 dark:border-orange-900/30 shadow-md">
           <CardContent className="pt-6 flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-orange-600">Pending</p>
-              <h3 className="text-2xl font-bold mt-1">{pendingTodos.length}</h3>
+              <p className="text-sm font-medium text-orange-600 dark:text-orange-300">Pending</p>
+              <h3 className="text-2xl font-bold mt-1 dark:text-white">{pendingTodos.length}</h3>
             </div>
-            <div className="bg-orange-100 p-3 rounded-full">
-              <div className="h-6 w-6 flex items-center justify-center text-orange-500">
+            <div className="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-full">
+              <div className="h-6 w-6 flex items-center justify-center text-orange-500 dark:text-orange-300">
                 {todos.length ? Math.round((pendingTodos.length / todos.length) * 100) : 0}%
               </div>
             </div>

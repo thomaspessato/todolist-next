@@ -28,12 +28,12 @@ export function TodoForm({ onAddTodo, folders, selectedFolder, onFolderChange }:
   };
 
   return (
-    <Card className="p-6 mb-6 bg-gradient-to-br from-white to-indigo-50/30 shadow-sm border border-indigo-100/50">
+    <Card className="p-6 mb-6 bg-gradient-to-br from-white to-indigo-50/30 dark:from-slate-800 dark:to-slate-700 shadow-sm border border-indigo-100/50 dark:border-indigo-900/30">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <PlusCircle className="h-5 w-5 text-indigo-500" />
-            <h2 className="text-lg font-medium text-gray-800">Add New Task</h2>
+            <PlusCircle className="h-5 w-5 text-indigo-500 dark:text-indigo-400" />
+            <h2 className="text-lg font-medium text-gray-800 dark:text-gray-100">Add New Task</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-3">

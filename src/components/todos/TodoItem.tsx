@@ -20,8 +20,8 @@ export function TodoItem({ todo, onToggle, onDelete, folderColor }: TodoItemProp
     <Card 
       className={`p-4 transition-all duration-200 hover:shadow-md ${
         todo.completed 
-        ? 'bg-neutral-50 border-neutral-200' 
-        : 'bg-white border-l-4'
+        ? 'bg-neutral-50 dark:bg-slate-800 border-neutral-200 dark:border-slate-700' 
+        : 'bg-white dark:bg-slate-800 border-l-4'
       }`}
       style={{ borderLeftColor: todo.completed ? undefined : folderColor }}
     >
@@ -47,13 +47,13 @@ export function TodoItem({ todo, onToggle, onDelete, folderColor }: TodoItemProp
             <label 
               htmlFor={`todo-${todo.id}`} 
               className={`text-base cursor-pointer flex-grow ${
-                todo.completed ? 'line-through text-neutral-500' : 'text-neutral-800'
+                todo.completed ? 'line-through text-neutral-500 dark:text-neutral-400' : 'text-neutral-800 dark:text-gray-100'
               }`}
             >
               {todo.text}
             </label>
             
-            <div className="flex items-center mt-1 text-xs text-neutral-500 gap-1">
+            <div className="flex items-center mt-1 text-xs text-neutral-500 dark:text-neutral-400 gap-1">
               <Calendar className="h-3 w-3" />
               <span>{formatDistanceToNow(new Date(todo.createdAt), { addSuffix: true })}</span>
             </div>
@@ -64,7 +64,7 @@ export function TodoItem({ todo, onToggle, onDelete, folderColor }: TodoItemProp
           variant="ghost" 
           size="icon" 
           onClick={() => onDelete(todo.id)}
-          className="h-8 w-8 rounded-full text-neutral-400 hover:text-red-500 hover:bg-red-50 transition-colors"
+          className="h-8 w-8 rounded-full text-neutral-400 dark:text-neutral-300 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
         >
           <Trash2 className="h-4 w-4" />
           <span className="sr-only">Delete task</span>
